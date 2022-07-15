@@ -22,4 +22,4 @@ jobs:
       run: cd stress-test-loader; bash ./build.sh
 
     - name: packer build ami
-      run: pwd; ls ./cicd/ami/build-stress-test-loader.sh
+      run: pwd; find .
