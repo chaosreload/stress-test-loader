@@ -13,9 +13,12 @@ jobs:
     container: seconddinner/build:0.0.1
     steps:
     - uses: actions/checkout@v3
-      
+    
+    - run: git describe --tags --long
+
     - name: build golang exec
       run: cd stress-test-loader; bash ./build.sh
 
     - name: packer build ami
-      run: bash ./cicd/ami/build-stress-test-loader.sh
+      run: pwd; 
+      # bash ./cicd/ami/build-stress-test-loader.sh
