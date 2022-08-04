@@ -69,3 +69,8 @@ variable "owner_id" {
 variable "public_key" {
   type = string
 }
+
+variable "stresstestlog" {
+  type    = string
+  default = "cubestresstest-log"
+}
