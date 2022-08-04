@@ -62,8 +62,9 @@ locals {
 }
 
 module "iam" {
-  source      = "../../terraform-modules/iam"
-  environment = var.environment
+  source        = "../../terraform-modules/iam"
+  environment   = var.environment
+  stresstestlog = var.stresstestlog
 }
 
 module "autoscale" {
