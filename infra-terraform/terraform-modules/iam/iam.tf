@@ -37,17 +37,21 @@ resource "aws_iam_role_policy" "stress_test_client_read" {
   "Statement": [
     {
       "Action": [
-        "s3:GetObject"
+        "s3:GetObject",
+        "s3:PutObject",
+        "s3:DeleteObject"
       ],
       "Effect": "Allow",
       "Resource": "arn:aws:s3:::cubestressclientartifactbucket-nv/*"
     },
     {
       "Action": [
-        "s3:PutObject"
+        "s3:PutObject",
+        "s3:GetObject",
+        "s3:DeleteObject"
       ],
       "Effect": "Allow",
-      "Resource": "arn:aws:s3:::${var.stresstestlog}"
+      "Resource": "arn:aws:s3:::${var.stresstestlog}/*"
     }
   ]
 }
