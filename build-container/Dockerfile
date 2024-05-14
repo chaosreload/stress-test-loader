@@ -1,4 +1,4 @@
-FROM golang:1.17
+FROM golang:1.21.10
 LABEL maintainer="Seconddinner Engineering Team"
 
 ENV PACKER_VERSION=1.7.10
